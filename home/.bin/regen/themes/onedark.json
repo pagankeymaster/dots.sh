@@ -1,0 +1,72 @@
+{
+  "wallpapers": [
+    "$XDG_PICTURES_DIR/wallpapers/outrun/od_wallhaven-j5lk95.jpg",
+    "$XDG_PICTURES_DIR/wallpapers/outrun/r-d.jpg",
+    "$XDG_PICTURES_DIR/wallpapers/other/fractal-tnz.png"
+  ],
+  "common": {
+    "base08": "#56b6c2",
+    "base04": "#414650",
+    "base15": "#d19a66",
+    "base05": "#979eab",
+    "base13": "#e5c07b",
+    "base06": "#ffffff",
+    "base01": "#23272f",
+    "base07": "#56b6c2",
+    "base14": "#98c379",
+    "base00": "#1a1e26",
+    "base12": "#be5046",
+    "base10": "#b77ee0",
+    "base11": "#e06c75",
+    "base02": "#2b2f37",
+    "base09": "#61afef",
+    "base03": "#393e48"
+  },
+  "syntax": {
+    "color08": "#e5d487",
+    "color10": "#d19a66",
+    "color11": "#e5c07b",
+    "color18": "#393e48",
+    "color14": "#8f96a3",
+    "color07": "#979eab",
+    "color16": "#61afef",
+    "color09": "#c397d8",
+    "color00": "#e06c75",
+    "color03": "#b77ee0",
+    "color02": "#be5046",
+    "color19": "#56b6c2",
+    "color17": "#56b6c2",
+    "color20": "#5fb0fc",
+    "color13": "#e87979",
+    "color01": "#e25656",
+    "color05": "#63b3ad",
+    "color12": "#98c379",
+    "color15": "#98c379",
+    "color04": "#61afef",
+    "color06": "#F186b5"
+  },
+  "rainbow": {
+    "orange": "#e06c75",
+    "purple": "#b77ee0",
+    "cobalt": "#61afef",
+    "pink": "#c397d8",
+    "cyan": "#56b6c2",
+    "green": "#98c379",
+    "yellow": "#e5c07b"
+  },
+  "shades": {
+    "shade00": "#43474F",
+    "shade01": "#3b3f47",
+    "shade02": "#33373f",
+    "shade03": "#2e323a",
+    "shade04": "#262a32",
+    "shade05": "#242830",
+    "shade06": "#20242c",
+    "shade07": "#1c2028",
+    "shade08": "#191d25",
+    "shade09": "#151921",
+    "shade10": "#11151d",
+    "shade11": "#0d1119",
+    "shade12": "#090d15"
+  }
+}

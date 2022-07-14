@@ -127,7 +127,8 @@ button {
   horizontal-align: center;
   border-radius: 0.4em;
   font: "feather 30";
-  padding: 0 0.8em;
+  horizontal-align: 0.5;
+  padding: 0 0.9em;
 }
 
 button selected {

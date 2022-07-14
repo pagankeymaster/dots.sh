@@ -65,6 +65,19 @@ function json_subscribe() {
   done
 }
 
+function json_subscribe_preset() {
+  local old new
+  old="$(get_json)"
+  echo "$old"
+  while sleep "$1"; do
+    new="$(get_json)"
+    if [[ "$old" != "$new" ]]; then
+      echo "$new"
+      old="$new"
+    fi
+  done
+}
+
 function set_env() {
   local config_value
   for variable in "${wm_config[@]}"; do
@@ -100,6 +113,7 @@ case "$1" in
   --json|-j) get_json;;
   --sub-json|-sj) json_subscribe "$2" 'get_json';;
   --sub|-s) json_subscribe "${@:2}";;
+  --sub-short|-ss) json_subscribe_preset "${@:2}";;
   --raw-sub|-rs) raw_subscribe "$2" 'echo_choice';;
   *) raw_subscribe 0.1 'notify_choice';;
 esac
