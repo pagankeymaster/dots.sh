@@ -110,8 +110,35 @@ function _default_greeter() {
   printf "\n $c1▇▇ $c2▇▇ $c3▇▇ $c4▇▇ $c5▇▇ $c6▇▇ $c7▇▇ $c8▇▇ $reset\n\n"
 }
 
+function _toggle-prompt() {
+  case "$1" in
+    right) p10k display '*/right'=hide,show ;;
+    left) p10k display '*/left'=hide,show ;;
+  esac
+}
+
+function _toggle-right-prompt() {
+  _toggle-prompt right
+}
+
+function _toggle-left-prompt() {
+  _toggle-prompt left
+}
+
 function toppy() {
-    history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n 21
+  history \
+    | awk '{
+      CMD[$2]++;
+      count++;
+    } END {
+    for (a in CMD)
+      print CMD[a] " " CMD[a] / count * 100 "% " a;
+    }' \
+    | grep -v "./" \
+    | column -c3 -s " " -t \
+    | sort -nr \
+    | nl \
+    |  head -n 21
 }
 
 # vim:ft=sh

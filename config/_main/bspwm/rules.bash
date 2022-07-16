@@ -41,5 +41,6 @@ rule Gmtp state=floating center=on
 rule Zim state=floating sticky=on rectangle=445x426+1422+38
 rule obs center=on rectangle=1449x962+236+60
 rule Shotcut center=on rectangle=1348x909+286+87
+rule Xscreensaver-settings center=on state=floating
 
 # vim:ft=sh

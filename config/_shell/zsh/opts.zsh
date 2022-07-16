@@ -13,6 +13,8 @@ colors
 
 zle -N _vi_search_fix
 zle -N _sudo_command_line
+zle -N _toggle-right-prompt
+zle -N _toggle-left-prompt
 
 # adapted from https://is.gd/RRNqsV
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}

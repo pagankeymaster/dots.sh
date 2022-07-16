@@ -13,5 +13,7 @@ bindkey -M viins '\e/' _vi_search_fix
 bindkey "^?" backward-delete-char
 bindkey "^H" backward-delete-char
 bindkey "^U" backward-kill-line
+bindkey '^P' _toggle-right-prompt
+bindkey '^Y' _toggle-left-prompt
 
 # vim:ft=zsh:nowrap

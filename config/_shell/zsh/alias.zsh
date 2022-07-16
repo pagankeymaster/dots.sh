@@ -543,4 +543,10 @@ function fcfzf() {
 alias spotifyd="spotifyd --config-path '$XDG_CONFIG_HOME/spotifyd/spotifyd.conf' --no-daemon"
 alias luamake="$HOME/.opt/lua-language-server/3rd/luamake/luamake"
 
+function p10kstate() {
+  local reply
+  p10k display -a '*'
+  printf '%-32s = %q\n' ${(@kv)reply} | sort
+}
+
 # vim:ft=zsh
