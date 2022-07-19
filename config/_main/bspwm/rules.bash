@@ -42,5 +42,9 @@ rule Zim state=floating sticky=on rectangle=445x426+1422+38
 rule obs center=on rectangle=1449x962+236+60
 rule Shotcut center=on rectangle=1348x909+286+87
 rule Xscreensaver-settings center=on state=floating
+rule Font-viewer center=on state=floating rectangle=943x667+471+206
+rule Font-manager center=on state=floating rectangle=1339x948+291+67
+rule Dockx manage=off
+rule Kvantum\ Manager center=on state=floating rectangle=932x660+494+211
 
 # vim:ft=sh

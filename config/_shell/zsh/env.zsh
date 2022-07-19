@@ -1,8 +1,9 @@
+export QT_STYLE_OVERRIDE=kvantum
 export SUDO_PROMPT="pass: "
-export TERMINAL="st"
-export BROWSER="qutebrowser"
-export VISUAL="nvim"
-export EDITOR="nvim"
+export TERMINAL=st
+export BROWSER=firefox
+export VISUAL=nvim
+export EDITOR=nvim
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

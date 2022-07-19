@@ -1,0 +1,70 @@
+{
+  "wallpapers": [
+    "$XDG_PICTURES_DIR/wallpapers/radium/radium.jpg"
+  ],
+  "common": {
+    "base08": "#67afc1",
+    "base04": "#8e8f9e",
+    "base15": "#bc83e3",
+    "base05": "#d9d7d6",
+    "base13": "#e9967e",
+    "base06": "#E3E1E0",
+    "base01": "#0a1519",
+    "base07": "#7acfe4",
+    "base14": "#8cd7aa",
+    "base00": "#061115",
+    "base12": "#78b892",
+    "base10": "#c488ec",
+    "base11": "#f16269",
+    "base02": "#1c252c",
+    "base09": "#79aaeb",
+    "base03": "#484e5b"
+  },
+  "syntax": {
+    "color08": "#de8f78",
+    "color10": "#e9967e",
+    "color11": "#e9967e",
+    "color18": "#8e8f9e",
+    "color14": "#7d7f8e",
+    "color07": "#d9d7d6",
+    "color16": "#79aaeb",
+    "color09": "#bc83e3",
+    "color00": "#f16269",
+    "color03": "#c488ec",
+    "color02": "#78b892",
+    "color19": "#7acfe4",
+    "color17": "#67afc1",
+    "color20": "#6791c9",
+    "color13": "#df5b61",
+    "color01": "#e25656",
+    "color05": "#63b3ad",
+    "color12": "#8cd7aa",
+    "color15": "#8cd7aa",
+    "color04": "#37d99e",
+    "color06": "#F186b5"
+  },
+  "rainbow": {
+    "orange": "#f16269",
+    "purple": "#bc83e3",
+    "cobalt": "#79aaeb",
+    "pink": "#c488ec",
+    "cyan": "#7acfe4",
+    "green": "#8cd7aa",
+    "yellow": "#e9967e"
+  },
+  "shades": {
+    "shade00": "#455054",
+    "shade01": "#3b464a",
+    "shade02": "#313c40",
+    "shade03": "#242f33",
+    "shade04": "#222d31",
+    "shade05": "#212C30",
+    "shade06": "#1c272b",
+    "shade07": "#192428",
+    "shade08": "#131e22",
+    "shade09": "#101B1F",
+    "shade10": "#0d181c",
+    "shade11": "#0C171B",
+    "shade12": "#000a0e"
+  }
+}

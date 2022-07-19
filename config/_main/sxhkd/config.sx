@@ -252,4 +252,7 @@ super + ctrl + {Up,Down}
 super + alt + {m,n}
   "$XDG_CONFIG_HOME"/sxhkd/script/skunk.bash --{hide-loop,unhide-all}
 
+super + r
+  bspc node @/ --rotate 90
+
 # vim:filetype=sxhkd

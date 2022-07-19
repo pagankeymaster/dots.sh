@@ -5,15 +5,24 @@ is_eww_opened() {
   [ "$window" = "$1" ] && echo 1 || echo 0
 }
 
-while sleep 1; do
+while sleep 10; do
   pgrep -x picom >/dev/null || continue
-  opened="$(is_eww_opened ocular)"
+  bar_opened="$(is_eww_opened vertigo)"
+  opened="$(is_eww_opened lumin)"
+  if [ "$bar_opened" -eq 1 ] && [ "$opened" -eq 1 ]; then
+    eww close lumin melody origin
+  elif [ "$bar_opened" -eq 1 ]; then
+    continue
+  fi
+
   if bspc query --nodes --node focused.\!hidden; then
-    [ "$opened" -eq 1 ] && eww close ocular
+    [ "$opened" -eq 1 ] && eww close lumin melody origin
   else
     [ "$opened" -eq 0 ] && {
-      eww open ocular
-      xdo lower -N eww-ocular
+      eww open-many lumin melody origin
+      xdo lower -N eww-lumin
+      xdo lower -N eww-melody
+      xdo lower -N eww-origin
     }
   fi
 done
