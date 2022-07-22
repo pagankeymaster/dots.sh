@@ -500,7 +500,7 @@ function monv-noshade() {
 }
 
 function montage-shot() {
-  montage -shadow -background '#c397d8' -geometry +20+20 -tile 2x *.png montage.png
+  montage -background '#4b6576' -geometry +20+20 -tile 2x *.png montage.png
 }
 
 function adbwifi() {
@@ -521,13 +521,7 @@ function regen-theme() {
 }
 
 function fcrofi() {
-  fc-list \
-    | awk -F '[:,]' '{gsub("^ ", "", $2); print $2}' \
-    | sort \
-    | uniq \
-    | rofi -dmenu -p 'Fonts' \
-    | tr -d '\n' \
-    | xclip
+  fc-list | awk -F '[:,]' '{gsub("^ ", "", $2); print $2}' | sort | uniq | rofi -dmenu -p 'Fonts' | tr -d '\n' | xclip
 }
 
 function fcfzf() {

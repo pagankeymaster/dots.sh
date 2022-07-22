@@ -139,29 +139,6 @@ def genfirefox() -> None:
     ).write_text(changed)
 
 
-def genstylus() -> None:
-    changed: dict = loads(pathlib.PosixPath("./template/stylus.json").read_text())
-    changed[1]["usercssData"]["vars"]["primary"]["value"] = colors["common"]["base00"]
-    changed[1]["usercssData"]["vars"]["primary"]["default"] = colors["shades"][
-        "shade05"
-    ]
-    changed[1]["usercssData"]["vars"]["secondary"]["value"] = colors["shades"][
-        "shade12"
-    ]
-    changed[1]["usercssData"]["vars"]["secondary"]["default"] = colors["shades"][
-        "shade04"
-    ]
-    changed[1]["usercssData"]["vars"]["tertiary"]["value"] = colors["shades"]["shade08"]
-    changed[1]["usercssData"]["vars"]["tertiary"]["default"] = colors["shades"][
-        "shade07"
-    ]
-    changed[2]["usercssData"]["vars"]["mainColor"]["value"] = colors["common"]["base14"]
-    changed[2]["usercssData"]["vars"]["mainColor"]["default"] = colors["common"][
-        "base11"
-    ]
-    pathlib.PosixPath(os.path.expandvars("$HOME/.mozilla/profiles/Minimal/chrome/stylus.json")).write_text(dumps(changed))
-
-
 def genscreenkey() -> None:
     changed: dict = loads(
         pathlib.PosixPath(os.path.expandvars("$XDG_CONFIG_HOME/screenkey.json")).read_text()
@@ -257,7 +234,6 @@ def setwallpaper() -> None:
 # genkitty()
 # genrofi()
 # gencava()
-# genstylus()
 # genzsh()
 # genbash()
 genkvantum()

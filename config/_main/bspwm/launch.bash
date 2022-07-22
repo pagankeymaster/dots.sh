@@ -14,7 +14,6 @@ killall python bspc 2>/dev/null
 preboot sxhkd -c '$XDG_CONFIG_HOME/sxhkd/config.sx' -s /tmp/sxhkd.fifo
 
 preboot ksuperkey -t 100 -e "'Super_L=Super_L|d'"
-preboot eww open vertigo
 preboot stalonetray --config '$XDG_CONFIG_HOME/tray/config.conf'
 preboot parcellite --no-icon # clipboard manager
 preboot dunst -config '$XDG_CONFIG_HOME/dunst/config.ini'
@@ -25,5 +24,6 @@ preboot mpd
 ## preboot picom --config '$XDG_CONFIG_HOME/picom/config.ini' &
 ## preboot spotifyd &
 ## preboot plank --name bottom-dock
+## preboot eww open vertigo
 
 # vim:ft=sh

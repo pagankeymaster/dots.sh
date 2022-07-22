@@ -25,7 +25,7 @@ wm single_monocle false
 wm center_pseudo_tiled true
 wm presel_feedback true
 
-wm honor_size_hints true 
+wm honor_size_hints true
 wm remove_disabled_monitors true
 wm removal_adjustment true
 wm remove_unplugged_monitors true
@@ -46,7 +46,7 @@ wm pointer_action1 move
 wm pointer_action2 resize_side
 wm pointer_action3 resize_corner
 wm click_to_focus button1
-wm swallow_first_click true
+wm swallow_first_click false
 wm focus_follows_pointer false
 wm pointer_follows_focus false
 wm pointer_follows_monitor true

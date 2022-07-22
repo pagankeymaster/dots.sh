@@ -106,7 +106,7 @@ function subscribe() {
 			oldhead="$newhead"
         elif [[ "$mutenew" != "$muteold" ]]; then
 			[ "$mutenew" = false ] && notify custom-volume-unmute "-h int:value:$level" Pulseaudio 'Volume has been unmuted.'
-			[ "$mutenew" = true ] && notify custom-volume-mute "" Pulseaudio 'Volume has been muted.'
+			[ "$mutenew" = true ] && notify-send -i custom-volume-mute Pulseaudio 'Volume has been muted.'
 			muteold="$mutenew"
 		fi
 	done
