@@ -11,7 +11,7 @@ FREQ=${FREQ:-0.1}
 
 INNER=5
 OUTER=15
-TOTAL=$((INNER+OUTER))
+TOTAL=$((INNER + OUTER))
 
 bspc config border_width $TOTAL
 [ ! -f "$LOCK" ] && touch "$LOCK"

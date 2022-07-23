@@ -7,7 +7,7 @@ is_eww_opened() {
 
 while sleep 10; do
   opened="$(is_eww_opened lumin)"
-  if ! pgrep -x picom >/dev/null; then
+  if ! pgrep -x picom > /dev/null; then
     [ "$opened" -eq 1 ] && eww close lumin melody origin
     continue
   fi

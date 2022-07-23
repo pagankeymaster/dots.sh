@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias xclip='xclip -selection clipboard'
 
 if [ -x "$(command -v exa)" ]; then
@@ -367,8 +369,7 @@ alias kittythemes="kitty +kitten themes"
 alias nvupd="nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"
 
 ccat() {
-  if $2
-  then
+  if $2; then
       pygmentize -g $1 | cat
   else
       pygmentize -g $2 | cat $1

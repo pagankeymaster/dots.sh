@@ -500,7 +500,8 @@ function monv-noshade() {
 }
 
 function montage-shot() {
-  montage -background '#4b6576' -geometry +20+20 -tile 2x *.png montage.png
+  pngs=(*.png)
+  montage -background '#4b6576' -geometry +25+25 -tile ${#pngs}x *.png montage.png
 }
 
 function adbwifi() {

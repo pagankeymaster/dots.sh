@@ -4,31 +4,31 @@
 
 :root {
     /* Special */
-    --background: #151A1F;
-    --foreground: #BEBEBE;
+    --background: #101317;
+    --foreground: #d4d4d5;
 
     /* Colors */
-    --color0: #2C3035;
-    --color8: #42484E;
+    --color0: #171C21;
+    --color8: #949494;
 
-    --color1: #8AAC8B;
-    --color9: #8AAC8B;
+    --color1: #f87070;
+    --color9: #f87070;
 
-    --color2: #948FB1;
-    --color10: #8AABAC;
+    --color2: #79dcaa;
+    --color10: #36c692;
 
-    --color3: #7797B7;
-    --color11: #7797B7;
+    --color3: #ffe59e;
+    --color11: #ffe59e;
 
-    --color4: #c9938a;
-    --color12: #c9938a;
+    --color4: #7ab0df;
+    --color12: #7ab0df;
 
-    --color5: #AC8A8C;
-    --color13: #ACA98A;
+    --color5: #c397d8;
+    --color13: #b77ee0;
 
-    --color6: #B0B0B0;
-    --color14: #AC8A8C;
+    --color6: #54ced6;
+    --color14: #70c0ba;
 
-    --color7: #BEBEBE;
-    --color15: #BBBBBB;
+    --color7: #d4d4d5;
+    --color15: #ffffff;
 }

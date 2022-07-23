@@ -25,10 +25,9 @@ xset mouse 0 0
 # LG3D or compiz for Java
 # wmname LG3D &
 
-for scrip in "$XDG_CONFIG_HOME/bspwm/hooks/"*
-do
+for scrip in "$XDG_CONFIG_HOME/bspwm/hooks/"*; do
   [[ "$scrip" != *".skip" ]] && {
-    pgrep --full "$scrip" | xargs kill -9 2>/dev/null
+    pgrep --full "$scrip" | xargs kill -9 2> /dev/null
     eval "$scrip &>/dev/null &"
   }
 done

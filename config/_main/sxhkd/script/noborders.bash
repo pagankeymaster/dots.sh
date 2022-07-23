@@ -5,7 +5,7 @@ default="$(bspc config -m focused border_width)"
 
 function floating() {
   [[ "$1" == "floating" && "$2" == "on" ]] \
-    || bspc config -n focused border_width "$default"   \
+    || bspc config -n focused border_width "$default" \
     && bspc config -n focused border_width 0
 }
 
@@ -26,8 +26,8 @@ function stop() {
 }
 
 case $1 in
-  start) start;;
-  stop) stop;;
+  start) start ;;
+  stop) stop ;;
 esac
 
 unset cache

@@ -7,9 +7,9 @@ PADDING="    "
 
 function get_attrs() {
   while read -r node_id; do
-    desktop_name="$(xdotool get_desktop_for_window "$node_id" 2>/dev/null)"
-    class_name="$(xdotool getwindowclassname "$node_id" 2>/dev/null)"
-    node_name="$(xdotool getwindowname "$node_id" 2>/dev/null)"
+    desktop_name="$(xdotool get_desktop_for_window "$node_id" 2> /dev/null)"
+    class_name="$(xdotool getwindowclassname "$node_id" 2> /dev/null)"
+    node_name="$(xdotool getwindowname "$node_id" 2> /dev/null)"
 
     [ "$desktop_name" ] || continue
     INDICES+=("$node_id")
@@ -18,7 +18,7 @@ function get_attrs() {
 }
 
 case "$1" in
-  --unhide|-x)
+  --unhide | -x)
     get_attrs "hidden"
 
     null="$(echo "$ROFI_ITEMS" | tr --delete '\t\n ')"
@@ -37,7 +37,7 @@ case "$1" in
     eval "bspc node ${INDICES[$index]} --flag hidden=off"
     echo "hidden=off node=${INDICES[$index]}"
     ;;
-  --hide|-c)
+  --hide | -c)
     get_attrs "!hidden"
 
     null="$(echo "$ROFI_ITEMS" | tr --delete '\t\n ')"
@@ -45,7 +45,7 @@ case "$1" in
       notify-send -a layouts -u critical -i custom-cancel Minimize 'No windows open!'
       exit 1
     }
- 
+
     read -r index < <(echo -e "$ROFI_ITEMS" | rofi -format 'i' -dmenu -p MiniSL)
 
     [ "$index" ] || {

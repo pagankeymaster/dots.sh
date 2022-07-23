@@ -1,9 +1,10 @@
 #!/bin/bash
+# shellcheck disable=2016
 
 function loop() {
   echo -e "$(tput setb 1) $(tput setf 0)INFO \e[0m Right click to exit loop."
   while :; do
-    node_id="$(xdotool selectwindow 2>/dev/null)"
+    node_id="$(xdotool selectwindow 2> /dev/null)"
     [ "$node_id" ] || exit 0 && eval "$*"
   done
 }
@@ -21,18 +22,18 @@ function ewmh_unhide_all() {
 }
 
 case "$1" in
-  --hide-loop|-s) loop bspc node '$node_id' --flag hidden=on ;;
-  --close-loop|-c) loop bspc node '$node_id' --flag hidden=on ;;
-  --unhide-all|-a) unhide_all ;;
+  --hide-loop | -s) loop bspc node '$node_id' --flag hidden=on ;;
+  --close-loop | -c) loop bspc node '$node_id' --flag hidden=on ;;
+  --unhide-all | -a) unhide_all ;;
 
-  --ewmh-hide-loop|-sw) loop xdotool windowstate --add HIDDEN '$node_id' ;;
-  --ewmh-close-loop|-cw) loop xdotool windowclose '$node_id' ;;
-  --ewmh-unhide-all|-aw) ewmh_unhide_all ;;
+  --ewmh-hide-loop | -sw) loop xdotool windowstate --add HIDDEN '$node_id' ;;
+  --ewmh-close-loop | -cw) loop xdotool windowclose '$node_id' ;;
+  --ewmh-unhide-all | -aw) ewmh_unhide_all ;;
 
-  --one-shot-hide|-x) xdotool selectwindow | xargs --replace=++ bspc node ++ --flag hidden=on ;;
-  --one-shot-kill|-d) xdotool selectwindow | xargs --replace=++ bspc node ++ --close ;;
+  --one-shot-hide | -x) xdotool selectwindow | xargs --replace=++ bspc node ++ --flag hidden=on ;;
+  --one-shot-kill | -d) xdotool selectwindow | xargs --replace=++ bspc node ++ --close ;;
 
-  --help|-h) echo -e "$(tput setb 3) $(tput setf 0)USAGE \e[0m Brief script options
+  --help | -h) echo -e "$(tput setb 3) $(tput setf 0)USAGE \e[0m Brief script options
   skunk -{s,c,a}
   skunk -{x,d}
   skunk -{sw,cw,aw}

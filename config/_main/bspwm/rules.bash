@@ -3,9 +3,7 @@
 # removed all / default / prev rules
 bspc rule --remove '*:*'
 
-function rule() {
-  bspc rule --add "$@"
-}
+function rule() { bspc rule --add "$@"; }
 
 # Program settings
 rule glava state=floating manage=off layer=below
@@ -22,7 +20,7 @@ rule blueman-manager state=floating state=floating center=on
 rule Plank manage=on border=off locked=on focus=off follow=off layer=above
 rule blueman-adapters state=floating state=floating center=on
 rule Rofi border=off manage=off layer=above
-rule nm-connection-editor='^1' state=floating 
+rule nm-connection-editor='^1' state=floating
 rule Dconf-editor state=floating center=on
 rule Git-gui state=floating center=on
 rule Org.gnome.Nautilus state=floating center=on

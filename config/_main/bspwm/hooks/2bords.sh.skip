@@ -22,8 +22,8 @@ bspc config border_width $BORD_TOTAL
   bspc subscribe node_geometry node_focus
 } | while read -r _; do
   [ -f "$LOCKFILE" ] || break
-  chwb2 -I "$INNER_NORM" -O "$OUTER" -i $BORD_INNER -o $BORD_OUTER $(lsw)
-  chwb2 -I "$INNER_FOCUS" -O "$OUTER" -i $BORD_INNER -o $BORD_OUTER $(pfw)
+  chwb2 -I "$INNER_NORM" -O "$OUTER" -i $BORD_INNER -o $BORD_OUTER "$(lsw)"
+  chwb2 -I "$INNER_FOCUS" -O "$OUTER" -i $BORD_INNER -o $BORD_OUTER "$(pfw)"
 done
 bspc config border_width "$DEFAULT"
 

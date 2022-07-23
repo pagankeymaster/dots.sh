@@ -217,7 +217,7 @@ def setwallpaper() -> None:
 
 
 # genspices()
-# gendunst()
+gendunst()
 # geneww()
 # gennvim()
 # genplank()
@@ -236,7 +236,7 @@ def setwallpaper() -> None:
 # gencava()
 # genzsh()
 # genbash()
-genkvantum()
+# genkvantum()
 
 # # order matters here
 # relxresource()
